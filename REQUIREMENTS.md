@@ -46,3 +46,27 @@ g.Containerization of the API solution
 h.Helm to deploy to K8s
 i.How to scale a cluster wise the application (vertical, horizontal)?
 j.Improvements or enhancements to current code
+
+# ---------------------------- Summary --------------------------------------
+
+# Features:
+
+- postgres db setup
+- redis + celery for async work
+- endpoints for managing flight routes and waypoints
+- endpoint for analysing the sensor data CSV (async, pandas)
+- JWT auth
+- docker-compose with services: app, postgres, celery, celery beat
+- pre-commit tool
+- makefile
+- package management - poetry
+
+# Comments:
+
+- JSON file data is inconsistent (fields missing for 1st waypoint)
+- input data is missing in order to be able to build the implementation in the specified time
+- a lot of investigation is needed in order to understand the requirements (for instance aeronautics terminology: )
+  - EET - estimated elapsed time
+  - OFP - Operational flight
+  - DCT - The direct route between two points following a great circle distance path
+- building the requested algorithms require more effort

@@ -7,8 +7,11 @@ from flight.models import SensorDataAnalysis
 geolocator = Nominatim(user_agent="geolocator")
 
 
-# execute a celery task, every 30 mins, return data for the latest entry in database
 def analyze_senor_data():
+    """
+    Let's pretend sendor-data comes from an S3 bucket
+    """
+
     df = pd.read_csv("sensor-data.csv")
 
     # Clean up data
