@@ -60,13 +60,17 @@ j.Improvements or enhancements to current code
 - pre-commit tool
 - makefile
 - package management - poetry
+- added documentation
 
-# Comments:
+# Remarks:
 
 - JSON file data is inconsistent (fields missing for 1st waypoint)
-- input data is missing in order to be able to build the implementation in the specified time
-- a lot of investigation is needed in order to understand the requirements (for instance aeronautics terminology: )
+- input data is missing in order to be able to build the implementation in the specified time; investigation is needed in order to understand the requirements; for instance aeronautics terminology:
   - EET - estimated elapsed time
   - OFP - Operational flight
   - DCT - The direct route between two points following a great circle distance path
 - building the requested algorithms require more effort
+- TO DO:
+  - add tests
+  - return routes (most used and most efficient)
+  - add helm

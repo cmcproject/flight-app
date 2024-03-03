@@ -31,10 +31,13 @@ You can access your Django server http://localhost:8000/
 
 ## Docker compose
 
-The docker-compose file defines two services:
+The docker-compose file defines several services:
 
 - A Postgres server
 - An application server
+- celeryworker
+- celerybeat
+- redis - message broker for celery
 
 ## Makefile shortcuts
 
