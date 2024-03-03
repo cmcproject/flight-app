@@ -205,3 +205,9 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
+
+REDIS_HOST = os.environ.get("REDIS_HOST")
+
+# Celery settings
+CELERY_BROKER_URL = f"redis://{REDIS_HOST}:6379/1"
+CELERY_RESULT_BACKEND = f"redis://{REDIS_HOST}:6379/1"

@@ -43,6 +43,21 @@ services:
     ports:
       - "6379:6379"
 
+  celeryworkers:
+    <<: *app-config
+    command: >-
+      celery -A config worker -l DEBUG
+    depends_on:
+      - redis
+      - db
+
+  celerybeat:
+    <<: *app-config
+    command: >-
+      celery -A config beat -l DEBUG
+    depends_on:
+      - redis
+      - db
 
 volumes:
   dev-db-data:

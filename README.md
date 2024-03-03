@@ -73,3 +73,4 @@ make lock
 
 - EET - estimated elapsed time
 - OFP - Operational flight
+- DCT - The direct route between two points following a great circle distance path.
